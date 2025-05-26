@@ -7,25 +7,25 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-near-black text-warm-cream py-12">
+    <footer className="bg-coffee-brown text-warm-cream py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-playfair text-2xl font-bold text-white mb-4">
+        <div className="grid md:grid-cols-3 gap-12">
+          <div className="space-y-4">
+            <h3 className="font-playfair text-3xl font-bold text-white mb-6">
               Artisan Coffee House
             </h3>
-            <p className="text-sm leading-relaxed">
+            <p className="text-base leading-relaxed text-gray-300">
               Crafting exceptional coffee experiences since 2020. Where passion meets perfection in every cup.
             </p>
           </div>
           
-          <div>
-            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-4">
+            <h4 className="font-semibold text-white text-lg mb-6">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
                 <button 
                   onClick={() => scrollToSection("home")}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-base"
                 >
                   Home
                 </button>
@@ -33,7 +33,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection("menu")}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-base"
                 >
                   Menu
                 </button>
@@ -41,7 +41,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection("location")}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-base"
                 >
                   Location
                 </button>
@@ -49,7 +49,7 @@ export default function Footer() {
               <li>
                 <button 
                   onClick={() => scrollToSection("contact")}
-                  className="hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 text-base"
                 >
                   Contact
                 </button>
@@ -57,19 +57,20 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div>
-            <h4 className="font-semibold text-white mb-4">Contact Info</h4>
-            <div className="space-y-2 text-sm">
-              <p>123 Coffee Street</p>
-              <p>Your City, State 12345</p>
+          <div className="space-y-4">
+            <h4 className="font-semibold text-white text-lg mb-6">Contact Info</h4>
+            <div className="space-y-3 text-base text-gray-300">
+              <p className="leading-relaxed">123 Coffee Street<br />Your City, State 12345</p>
               <p>(555) 123-BREW</p>
-              <p>hello@artisancoffeehouse.com</p>
+              <p className="break-words">hello@artisancoffeehouse.com</p>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2024 Artisan Coffee House. All rights reserved.</p>
+        <div className="border-t border-soft-mocha/30 mt-12 pt-8 text-center">
+          <p className="text-gray-400 text-sm">
+            &copy; 2024 Artisan Coffee House. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
