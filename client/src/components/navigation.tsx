@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,13 +54,19 @@ export default function Navigation() {
             >
               Location
             </button>
-            <button 
-              onClick={() => scrollToSection("contact")}
-              className="text-near-black hover:text-coffee-brown transition-colors"
-            >
-              Contact
-            </button>
-          </div>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="text-near-black hover:text-coffee-brown transition-colors"
+          >
+            Contact
+          </button>
+          <Link
+            href="/promos"
+            className="text-near-black hover:text-coffee-brown transition-colors"
+          >
+            Promos
+          </Link>
+        </div>
 
           {/* Mobile Menu Button */}
           <Button
@@ -94,12 +101,19 @@ export default function Navigation() {
               >
                 Location
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection("contact")}
                 className="text-near-black hover:text-coffee-brown transition-colors text-left"
               >
                 Contact
               </button>
+              <Link
+                href="/promos"
+                className="text-near-black hover:text-coffee-brown transition-colors text-left"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Promos
+              </Link>
             </div>
           </div>
         )}
